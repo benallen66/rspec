@@ -4,10 +4,9 @@ describe "Person class - entry in phonebook" do
   it "should store and return personal information" do
  
     person = Person.new("ben", "allen", "2 Dec 1982")
-	expect(person.date.to_s).to eq "1982-02-12"
+		expect(person.date.to_s).to eq "1982-02-12"
     expect(person.first_name).to eq "Ben"
     expect(person.surname).to eq "Allen"
-    expect(person.fullname).to eq "Ben Allen"
   end	
 end
 
@@ -31,8 +30,8 @@ describe "Phone numbers method - entry in numbers"do
   end
 end
 
-describe "Remove emails mathod - removal of email"do
-	it "should remove meails previously added"do
+describe "Remove emails method - removal of email"do
+	it "should remove mails previously added"do
 
 	person = Person.new("ben", "allen", "2 Dec 1982")
 	person.add_emails("benallen66@hotmail.com")
