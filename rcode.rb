@@ -10,6 +10,7 @@ class Person
 	@surname = sname.capitalize
 	@fullname = @first_name + " " + @surname
 	@emails = []
+	@numbers = []
 	end
 
 	def date
@@ -22,7 +23,14 @@ class Person
 	end
 
 	def add_emails(email)
-		@emails.push(email)
+		@emails << (email)
 	end
 
+	def numbers
+		@numbers
+	end
+
+	def add_numbers(number)
+		@numbers << (number)
+	end
 end

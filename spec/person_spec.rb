@@ -16,7 +16,17 @@ describe "Emails method - entry in email"do
   
 	person = Person.new("ben", "allen", "2 Dec 1982")
 	person.add_emails("benallen66@hotmail.com")
-	# person.add_emails("benjaminallen1982@gmail.com")
-	expect(person.emails).to eq ["benallen66@hotmail.com"]
+	person.add_emails("benjaminallen1982@gmail.com")
+	expect(person.emails).to eq ["benallen66@hotmail.com", "benjaminallen1982@gmail.com"]
+  end
+end
+
+describe "Phone numbers method - entry in numbers"do
+	it "should store new phone numbers that are added"do
+
+	person = Person.new("ben", "allen", "2 Dec 1982")
+	person.add_numbers("01277373641")
+	person.add_numbers("07939500338")
+	expect(person.numbers).to eq ["01277373641","07939500338"]
   end
 end
