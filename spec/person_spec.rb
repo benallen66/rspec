@@ -30,3 +30,14 @@ describe "Phone numbers method - entry in numbers"do
 	expect(person.numbers).to eq ["01277373641","07939500338"]
   end
 end
+
+describe "Remove emails mathod - removal of email"do
+	it "should remove meails previously added"do
+
+	person = Person.new("ben", "allen", "2 Dec 1982")
+	person.add_emails("benallen66@hotmail.com")
+	person.add_emails("benjaminallen1982@gmail.com")
+	person.remove_emails(1)
+	expect(person.emails).to eq ["benallen66@hotmail.com"]
+  end
+end

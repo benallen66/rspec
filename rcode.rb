@@ -33,4 +33,8 @@ class Person
 	def add_numbers(number)
 		@numbers << (number)
 	end
+
+	def remove_emails(email_index)
+		@emails.delete_at(email_index) 
+	end
 end
